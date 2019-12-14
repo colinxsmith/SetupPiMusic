@@ -1,0 +1,21 @@
+#/bin/bash
+mkdir Pictures
+mkdir Videos
+mkdir Music
+sudo apt install tree
+sudo apt install libtool
+sudo apt install git
+sudo apt install libwww-perl liblwp-protocol-https-perl libmojolicious-perl libxml-libxml-perl libcgi-pm-perl
+sudo apt install ffmpeg atomicparsley
+mkdir iplayer
+cd iplayer/
+https://github.com/get-iplayer/get_iplayer.git
+git clone https://github.com/get-iplayer/get_iplayer.git
+cd
+sudo apt install mediainfo
+sudo apt install minidlna
+(cd /etc;sudo patch< ~/patchminidlna)
+sudo service minidlna restart
+sudo apt install vim
+sudo apt install libexif-dev libjpeg-dev libid3tag0-dev libflac-dev libvorbis-dev libsqlite3-dev libavformat-dev gettext
+git clone https://git.code.sf.net/p/minidlna/git minidlna-git
