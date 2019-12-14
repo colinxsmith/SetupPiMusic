@@ -14,7 +14,9 @@ git clone https://github.com/get-iplayer/get_iplayer.git
 cd
 sudo apt install mediainfo
 sudo apt install minidlna
-(cd /etc;sudo patch< ~/patchminidlna)
+(cd /etc;sudo patch< ~/SetUpPi/patchminidlna)
+cp vimrc ~/.vimrc
+cat bashrc >> ~/.bashrc
 sudo service minidlna restart
 sudo apt install vim
 sudo apt install libexif-dev libjpeg-dev libid3tag0-dev libflac-dev libvorbis-dev libsqlite3-dev libavformat-dev gettext

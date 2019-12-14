@@ -1,0 +1,52 @@
+*** /etc/minidlna.conf	2017-08-26 23:08:56.000000000 +0100
+--- minidlna.conf	2019-12-13 21:25:39.858351421 +0000
+***************
+*** 23,29 ****
+  #   * "P" for pictures (eg. media_dir=P,/var/lib/minidlna/pictures)
+  #   * "V" for video    (eg. media_dir=V,/var/lib/minidlna/videos)
+  #   * "PV" for pictures and video (eg. media_dir=PV,/var/lib/minidlna/digital_camera)
+! media_dir=/var/lib/minidlna
+  
+  # Set this to merge all media_dir base contents into the root container
+  # (The default is no.)
+--- 23,31 ----
+  #   * "P" for pictures (eg. media_dir=P,/var/lib/minidlna/pictures)
+  #   * "V" for video    (eg. media_dir=V,/var/lib/minidlna/videos)
+  #   * "PV" for pictures and video (eg. media_dir=PV,/var/lib/minidlna/digital_camera)
+! media_dir=A,/home/pi/Music
+! media_dir=P,/home/pi/Pictures
+! media_dir=V,/home/pi/Videos
+  
+  # Set this to merge all media_dir base contents into the root container
+  # (The default is no.)
+***************
+*** 78,91 ****
+  
+  # Name that the DLNA server presents to clients.
+  # Defaults to "hostname: username".
+! #friendly_name=
+  
+  # Serial number the server reports to clients.
+  # Defaults to the MAC address of nework interface.
+! #serial=
+  
+  # Model name the server reports to clients.
+! #model_name=Windows Media Connect compatible (MiniDLNA)
+  
+  # Model number the server reports to clients.
+  # Defaults to the version number of minidlna.
+--- 80,93 ----
+  
+  # Name that the DLNA server presents to clients.
+  # Defaults to "hostname: username".
+! friendly_name=Rapberry Buster Server
+  
+  # Serial number the server reports to clients.
+  # Defaults to the MAC address of nework interface.
+! serial=0734760213
+  
+  # Model name the server reports to clients.
+! model_name=David Knowles (MiniDLNA)
+  
+  # Model number the server reports to clients.
+  # Defaults to the version number of minidlna.
