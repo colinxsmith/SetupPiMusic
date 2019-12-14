@@ -4,7 +4,7 @@ mkdir Videos
 mkdir Music
 sudo apt install tree
 sudo apt install libtool
-sudo apt install git
+sudo apt install git git-gui
 sudo apt install libwww-perl liblwp-protocol-https-perl libmojolicious-perl libxml-libxml-perl libcgi-pm-perl
 sudo apt install ffmpeg atomicparsley
 mkdir iplayer
