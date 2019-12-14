@@ -24,3 +24,5 @@ sudo service minidlna restart
 sudo apt install vim
 sudo apt install libexif-dev libjpeg-dev libid3tag0-dev libflac-dev libvorbis-dev libsqlite3-dev libavformat-dev gettext
 git clone https://git.code.sf.net/p/minidlna/git minidlna-git
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
