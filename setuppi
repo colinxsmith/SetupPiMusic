@@ -3,6 +3,7 @@ mkdir Pictures
 mkdir Videos
 mkdir Music
 sudo apt install tree
+sudo apt install id3v2
 sudo apt install libtool autopoint
 sudo apt install git git-gui
 sudo apt install libwww-perl liblwp-protocol-https-perl libmojolicious-perl libxml-libxml-perl libcgi-pm-perl
