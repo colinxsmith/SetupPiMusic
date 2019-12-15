@@ -26,3 +26,11 @@ sudo apt install libexif-dev libjpeg-dev libid3tag0-dev libflac-dev libvorbis-de
 git clone https://git.code.sf.net/p/minidlna/git minidlna-git
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
+sudo apt install mpd
+(cd /etc;sudo patch< ~/SetUpPiMusic/patchmpd)
+sudo apt install mpc
+gpg --keyserver pool.sks-keyservers.net --recv-key F8E3347256922A8AE767605B7808CE96D38B9201
+gpg --export '7808CE96D38B9201' | sudo apt-key add -
+sudo apt update
+sudo apt install upmpdcli
+(cd /etc;sudo patch< ~/SetUpPiMusic/patchupmpdcli)

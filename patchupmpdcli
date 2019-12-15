@@ -1,0 +1,36 @@
+*** /etc/upmpdcli.conf	2019-12-15 16:57:41.667236341 +0000
+--- upmpdcli.conf	2019-12-15 16:58:12.086978200 +0000
+***************
+*** 58,64 ****
+  # UPnP Media Renderer.</brief><descr>This will be displayed by most Control
+  # Points to identify the Renderer. Some OpenHome Control Points may display
+  # the 'ohproductroom' value instead.</descr></var>
+! #friendlyname = UpMpd
+  
+  # <var name="upnpav" type="bool" values="1"><brief>Enable UPnP AV services
+  # (0/1).</brief><descr>This is set by default, but it may useful to switch
+--- 58,64 ----
+  # UPnP Media Renderer.</brief><descr>This will be displayed by most Control
+  # Points to identify the Renderer. Some OpenHome Control Points may display
+  # the 'ohproductroom' value instead.</descr></var>
+! friendlyname = Buster Player
+  
+  # <var name="upnpav" type="bool" values="1"><brief>Enable UPnP AV services
+  # (0/1).</brief><descr>This is set by default, but it may useful to switch
+***************
+*** 111,117 ****
+  # 64x64 32 bits-per-pixel png file. Default: '$pkgdatadir/icon.png'.
+  # The icon will only be read once, when upmpdcli starts
+  # up.</descr></var>
+! #iconpath = /usr/share/upmpdcli/icon.png
+  
+  # <var name="cachedir" type="dfn"><brief>Directory used to store cached
+  # data</brief><descr>Only used for the OpenHome queue metadata for now.
+--- 111,117 ----
+  # 64x64 32 bits-per-pixel png file. Default: '$pkgdatadir/icon.png'.
+  # The icon will only be read once, when upmpdcli starts
+  # up.</descr></var>
+! iconpath = /home/pi/minidlna-git/Ak48.png
+  
+  # <var name="cachedir" type="dfn"><brief>Directory used to store cached
+  # data</brief><descr>Only used for the OpenHome queue metadata for now.
