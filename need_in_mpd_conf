@@ -1,0 +1,25 @@
+# An example of an OSS output:
+#
+#name        "DAC Magic"
+#device        "hw:1,0"
+#mixer_device    "default"    # optional
+#mixer_control    "PCM"        # optional
+#mixer_index    "0"        # optional
+#}
+audio_output {
+        enabled         "yes"
+        type            "alsa"
+        name            "HiFiBerry DAC"
+mixer_control    "Master"        # optional
+        auto_resample   "no"
+        auto_channels   "no"
+        auto_format     "no"
+        dop             "no"
+}
+# An example of an ALSA output:
+#
+audio_output {
+	type		"alsa"
+	name		"ALSA Device"
+}
+#
