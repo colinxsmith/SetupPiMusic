@@ -1,0 +1,32 @@
+*** config.txt.old	2019-12-17 20:27:25.774556782 +0000
+--- config.txt.new	2019-12-17 20:30:20.321291847 +0000
+***************
+*** 54,65 ****
+  # Additional overlays and parameters are documented /boot/overlays/README
+  
+  # Enable audio (loads snd_bcm2835)
+! dtparam=audio=on
+  
+  [pi4]
+  # Enable DRM VC4 V3D driver on top of the dispmanx display stack
+! dtoverlay=vc4-fkms-v3d
+! max_framebuffers=2
+  
+  [all]
+  #dtoverlay=vc4-fkms-v3d
+--- 54,68 ----
+  # Additional overlays and parameters are documented /boot/overlays/README
+  
+  # Enable audio (loads snd_bcm2835)
+! #dtparam=audio=on   #I commented this out
+  
+  [pi4]
+  # Enable DRM VC4 V3D driver on top of the dispmanx display stack
+! #dtoverlay=vc4-fkms-v3d
+! #max_framebuffers=2
+  
+  [all]
+  #dtoverlay=vc4-fkms-v3d
++ start_x=1
++ gpu_mem=128
++ dtoverlay=hifiberry-dac
