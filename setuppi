@@ -35,3 +35,8 @@ gpg --export '7808CE96D38B9201' | sudo apt-key add -
 sudo apt update
 sudo apt install upmpdcli
 (cd /etc;sudo patch< ~/SetUpPiMusic/patchupmpdcli)
+sudo apt-get install openjdk-8-jre-headless
+sudo cp bubbleupnp /etc/init.d
+cp launch.sh /home/pi
+wget http://www.bubblesoftapps.com/bubbleupnpserver/BubbleUPnPServer-distrib.zip  
+unzip BubbleUPnPServer-distrib.zip
