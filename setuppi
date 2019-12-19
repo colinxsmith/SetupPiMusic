@@ -40,3 +40,4 @@ sudo cp bubbleupnp /etc/init.d
 cp launch.sh /home/pi
 wget http://www.bubblesoftapps.com/bubbleupnpserver/BubbleUPnPServer-distrib.zip  
 unzip BubbleUPnPServer-distrib.zip
+sudo systemctl daemon-reload
