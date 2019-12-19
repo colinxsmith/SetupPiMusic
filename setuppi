@@ -37,7 +37,8 @@ sudo apt install upmpdcli
 (cd /etc;sudo patch< ~/SetUpPiMusic/patchupmpdcli)
 sudo apt-get install openjdk-8-jre-headless
 sudo cp bubbleupnp /etc/init.d
-cp launch.sh /home/pi
+sudo chmod 755 /etc/init.d/bubbleupnp
+sudo systemctl daemon-reload
 wget http://www.bubblesoftapps.com/bubbleupnpserver/BubbleUPnPServer-distrib.zip  
 unzip BubbleUPnPServer-distrib.zip
-sudo systemctl daemon-reload
+cp launch.sh /home/pi
