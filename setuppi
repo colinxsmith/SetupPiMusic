@@ -42,3 +42,4 @@ sudo chmod 755 /etc/init.d/bubbleupnp
 sudo systemctl daemon-reload
 wget http://www.bubblesoftapps.com/bubbleupnpserver/BubbleUPnPServer-distrib.zip  
 unzip BubbleUPnPServer-distrib.zip
+#(cd /boot;sudo patch< ~/SetUpPiMusic/patchbootconfig)
