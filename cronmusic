@@ -1,0 +1,25 @@
+00 04 * * * /home/pi/getprog.sh > pvr`date +\%d-\%m-\%Y-\%T`
+00 19 * * 6 /home/pi/getprog.sh > pvr`date +\%d-\%m-\%Y-\%T`
+40 22 * * 6 /home/pi/getprog.sh > pvr`date +\%d-\%m-\%Y-\%T`
+30 18 * * 7 /home/pi/getprog.sh > pvr`date +\%d-\%m-\%Y-\%T`
+#42 12 * * 7 /home/pi/getprog.sh > pvr`date +\%d-\%m-\%Y-\%T`
+30 21 * * 5 /home/pi/getprog.sh > pvr`date +\%d-\%m-\%Y-\%T`
+#59 22 * * 1 /home/pi/getlive.sh > live`date +\%d-\%m-\%Y-\%T`
+#59 18 * * 7 /home/pi/getlive.sh > live`date +\%d-\%m-\%Y-\%T`
+#59 18 * * 5 /home/pi/getlive.sh > live`date +\%d-\%m-\%Y-\%a-\%T`
+#59 14 * * 6 /home/pi/getlive.sh > live`date +\%d-\%m-\%Y-\%a-\%T`
+#00 01 * * * /home/pi/testperl.sh >  tp`date +\%T`
+00 00 * * * /home/pi/transferpi.sh >  gs`date +\%T`
+#00 06 * * * /home/pi/transfermusic.sh > musiclog`date +\%T`
+45 07 * * 6 /home/pi/getprice.sh
+35 6 * * 1 /home/pi/getjez.sh >    jez`date +\%d-\%m-\%Y-\%a-\%T`
+35 6 * * 2 /home/pi/getjez.sh >    jez`date +\%d-\%m-\%Y-\%a-\%T`
+00 23 * * 1 /home/pi/sound/get.sh aac radio_three Mon 91
+00 19 * * 5 /home/pi/sound/get.sh aac 6music Fri 121
+00 15 * * 6 /home/pi/sound/get.sh aac 6music Sat 181
+00 13 * * 7 /home/pi/sound/get.sh aac 1xtra Sun 181
+#02 21 * * * /home/pi/sound/youGet.sh Y54lb2lDgD8 PLyNYhtFDaIKb__kkT3OrRUVeR-Y7sdAok PL085FFD0FB0D1DC25 > you.log
+#31 22 * * * /home/pi/sound/youGet.sh PLyNYhtFDaIKb__kkT3OrRUVeR-Y7sdAok >>  you.log
+# Edit this file to introduce tasks to be run by cron.
+#40 22 * * * /home/pi/sound/youGet.sh bYk6ihEDOnI >you.log
+# Each task to run has to be defined through a single line

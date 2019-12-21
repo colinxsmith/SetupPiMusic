@@ -43,3 +43,4 @@ sudo systemctl daemon-reload
 wget http://www.bubblesoftapps.com/bubbleupnpserver/BubbleUPnPServer-distrib.zip  
 unzip BubbleUPnPServer-distrib.zip
 #(cd /boot;sudo patch< ~/SetUpPiMusic/patchbootconfig)
+git clone https://github.com/colinxsmith/jezzer
