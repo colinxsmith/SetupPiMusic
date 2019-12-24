@@ -1,3 +1,26 @@
+# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+# 
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').
+# 
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+# 
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
 00 04 * * * /home/pi/getprog.sh > pvr`date +\%d-\%m-\%Y-\%T`
 00 19 * * 6 /home/pi/getprog.sh > pvr`date +\%d-\%m-\%Y-\%T`
 40 22 * * 6 /home/pi/getprog.sh > pvr`date +\%d-\%m-\%Y-\%T`
@@ -11,15 +34,15 @@
 #00 01 * * * /home/pi/testperl.sh >  tp`date +\%T`
 00 00 * * * /home/pi/transferpi.sh >  gs`date +\%T`
 #00 06 * * * /home/pi/transfermusic.sh > musiclog`date +\%T`
-45 07 * * 6 /home/pi/getprice.sh
-35 6 * * 1 /home/pi/getjez.sh >    jez`date +\%d-\%m-\%Y-\%a-\%T`
-35 6 * * 2 /home/pi/getjez.sh >    jez`date +\%d-\%m-\%Y-\%a-\%T`
+#45 07 * * 6 /home/pi/getprice.sh
+35 6 * * 1 /home/pi/jezzer/getjez.sh >    jez`date +\%d-\%m-\%Y-\%a-\%T`
+35 6 * * 2 /home/pi/jezzer/getjez.sh >    jez`date +\%d-\%m-\%Y-\%a-\%T`
 00 23 * * 1 /home/pi/sound/get.sh aac radio_three Mon 91
 00 19 * * 5 /home/pi/sound/get.sh aac 6music Fri 121
 00 15 * * 6 /home/pi/sound/get.sh aac 6music Sat 181
 00 13 * * 7 /home/pi/sound/get.sh aac 1xtra Sun 181
+00 11 * * * /home/pi/prices/VIRGIN.sh >> /home/pi/prices/hist
 #02 21 * * * /home/pi/sound/youGet.sh Y54lb2lDgD8 PLyNYhtFDaIKb__kkT3OrRUVeR-Y7sdAok PL085FFD0FB0D1DC25 > you.log
 #31 22 * * * /home/pi/sound/youGet.sh PLyNYhtFDaIKb__kkT3OrRUVeR-Y7sdAok >>  you.log
-# Edit this file to introduce tasks to be run by cron.
 #40 22 * * * /home/pi/sound/youGet.sh bYk6ihEDOnI >you.log
-# Each task to run has to be defined through a single line
+#53 22 * * * /home/pi/sound/youGet.sh VAHtV0G7iCM > you.log
