@@ -98,3 +98,4 @@ alias editmaker='for i in make*; do if grep +11 $i; then sed -i s/+11/+1z/ $i; f
 alias less='less -R'
 alias zipchanges='zip -fr backup $(diff -c base . | awk '\''/diff -c/{ print $4 }'\''|sed "s/..//;/Base/d")'
 alias green='awk '\''{ print "\x1b[1;32m"$0"\x1b[0;m" }'\'''
+alias leafweeks='(a=$(date +%s);b=$(date +%s --date="2020/03/03");echo  $((($a-$b)/3600/24/7)))'
