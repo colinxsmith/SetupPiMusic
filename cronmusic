@@ -1,4 +1,6 @@
 # Edit this file to introduce tasks to be run by cron.
+#35 20 * * 1 (cd /home/pi/Music ;rm test.m4a ;ffmpeg -i progJEZ1.aac  test.m4a)
+#22 23 * * * /home/pi/iplayer/get_iplayer/get_iplayer --pid m000jws6 -o /home/pi/Music
 # 
 # Each task to run has to be defined through a single line
 # indicating with different fields when the task will be run
@@ -24,7 +26,8 @@
 00 04 * * * /home/pi/getprog.sh > pvr`date +\%d-\%m-\%Y-\%T`
 00 19 * * 6 /home/pi/getprog.sh > pvr`date +\%d-\%m-\%Y-\%T`
 40 22 * * 6 /home/pi/getprog.sh > pvr`date +\%d-\%m-\%Y-\%T`
-30 18 * * 7 /home/pi/getprog.sh > pvr`date +\%d-\%m-\%Y-\%T`
+30 20 * * 7 /home/pi/getprog.sh > pvr`date +\%d-\%m-\%Y-\%T`
+05 23 * * 7 /home/pi/getprog.sh > pvr`date +\%d-\%m-\%Y-\%T`
 #42 12 * * 7 /home/pi/getprog.sh > pvr`date +\%d-\%m-\%Y-\%T`
 30 21 * * 5 /home/pi/getprog.sh > pvr`date +\%d-\%m-\%Y-\%T`
 #59 22 * * 1 /home/pi/getlive.sh > live`date +\%d-\%m-\%Y-\%T`
@@ -36,13 +39,22 @@
 #00 06 * * * /home/pi/transfermusic.sh > musiclog`date +\%T`
 #45 07 * * 6 /home/pi/getprice.sh
 35 6 * * 1 /home/pi/jezzer/getjez.sh >    jez`date +\%d-\%m-\%Y-\%a-\%T`
+15 21 * * 1 /home/pi/jezzer/getjez.sh >   jez`date +\%d-\%m-\%Y-\%a-\%T`
 35 6 * * 2 /home/pi/jezzer/getjez.sh >    jez`date +\%d-\%m-\%Y-\%a-\%T`
+35 4 * * 2 /home/pi/jezzer/getpaul.sh >  paul`date +\%d-\%m-\%Y-\%a-\%T`
+02 0 * * 1 /home/pi/sound/get.sh aac jazzfm JEZ 60 2
 00 23 * * 1 /home/pi/sound/get.sh aac radio_three Mon 91
 00 19 * * 5 /home/pi/sound/get.sh aac 6music Fri 121
 00 15 * * 6 /home/pi/sound/get.sh aac 6music Sat 181
-00 13 * * 7 /home/pi/sound/get.sh aac 1xtra Sun 181
-00 11 * * * /home/pi/prices/VIRGIN.sh >> /home/pi/prices/hist
+00 13 * * 7 /home/pi/sound/get.sh aac 1xtra Sun 121
+00 14 * * * /home/pi/prices/VIRGIN.sh >> /home/pi/prices/hist
 #02 21 * * * /home/pi/sound/youGet.sh Y54lb2lDgD8 PLyNYhtFDaIKb__kkT3OrRUVeR-Y7sdAok PL085FFD0FB0D1DC25 > you.log
 #31 22 * * * /home/pi/sound/youGet.sh PLyNYhtFDaIKb__kkT3OrRUVeR-Y7sdAok >>  you.log
 #40 22 * * * /home/pi/sound/youGet.sh bYk6ihEDOnI >you.log
 #53 22 * * * /home/pi/sound/youGet.sh VAHtV0G7iCM > you.log
+#28 13 * * * /home/pi/sound/youGet.sh za1mCTWQo3A > you.log
+#15 0 * * 1 /home/pi/sound/youGet.sh 4oxXCEDH304 > you.log
+#20 0 * * 3 /home/pi/sound/youGet.sh IJr9idAJdz0 > /home/pi/you.log
+#39 13 * * 6 /home/pi/sound/youGet.sh a7k20egMJGw > /home/pi/you.log
+#2 21 * * 5 /home/pi/sound/youGet.sh PLiN-7mukU_RHzT8A6Q0flHzfNw4dUjtAP > /home/pi/you.log
+#35 18 * * 5 /home/pi/sound/youGet.sh 6-GO7w678sQ
