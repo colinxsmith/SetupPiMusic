@@ -15,7 +15,7 @@ EnvironmentFile=-/etc/default/minidlna
 RuntimeDirectory=minidlna
 LogsDirectory=minidlna
 PIDFile=/run/minidlna/minidlna.pid
-ExecStart=/usr/sbin/minidlnad -v -f $CONFIGFILE -P /run/minidlna/minidlna.pid $DAEMON_OPTS
+ExecStart=/usr/sbin/minidlnad -f $CONFIGFILE -P /run/minidlna/minidlna.pid $DAEMON_OPTS
 
 
 [Install]
