@@ -14,8 +14,8 @@ git clone https://github.com/get-iplayer/get_iplayer.git
 cd
 sudo apt install mediainfo
 sudo apt install minidlna
-(cd /etc;sudo patch< ~/SetUpPiMusic/patchminidlna)
-cd SetUpPiMusic
+(cd /etc;sudo patch< ~/SetupPiMusic/patchminidlna)
+cd SetupPiMusic
 cp vimrc ~/.vimrc
 cat bashrc >> ~/.bashrc
 cd
@@ -27,23 +27,23 @@ git clone https://git.code.sf.net/p/minidlna/git minidlna-git
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
 sudo apt install mpd
-(cd /etc;sudo patch< ~/SetUpPiMusic/patchmpd)
+(cd /etc;sudo patch< ~/SetupPiMusic/patchmpd)
 sudo apt install mpc
-sudo cp ~/SetUpPiMusic/upmpdcli.list /etc/apt/sources.list.d/
+sudo cp ~/SetupPiMusic/upmpdcli.list /etc/apt/sources.list.d/
 gpg --keyserver pool.sks-keyservers.net --recv-key F8E3347256922A8AE767605B7808CE96D38B9201
 gpg --export '7808CE96D38B9201' | sudo apt-key add -
 sudo apt update
 sudo apt install upmpdcli
-(cd /etc;sudo patch< ~/SetUpPiMusic/patchupmpdcli)
+(cd /etc;sudo patch< ~/SetupPiMusic/patchupmpdcli)
 sudo service upmpdcli restart
 sudo apt-get install openjdk-8-jre-headless
-sudo cp ~/SetUpPiMusic/bubbleupnp /etc/init.d
+sudo cp ~/SetupPiMusic/bubbleupnp /etc/init.d
 sudo chmod 755 /etc/init.d/bubbleupnp
 sudo systemctl daemon-reload
 wget http://www.bubblesoftapps.com/bubbleupnpserver/BubbleUPnPServer-distrib.zip  
 unzip BubbleUPnPServer-distrib.zip
-cp ~/SetUpPiMusic/launch.sh /home/pi
-#(cd /boot;sudo patch< ~/SetUpPiMusic/patchbootconfig)
+cp ~/SetupPiMusic/launch.sh /home/pi
+#(cd /boot;sudo patch< ~/SetupPiMusic/patchbootconfig)
 git clone https://github.com/colinxsmith/jezzer
 git config --global core.editor vim
 git config --global credential.helper store
