@@ -1,0 +1,57 @@
+#/bin/bash
+sudo apt update
+mkdir Pictures
+mkdir Videos
+mkdir Music
+sudo apt install tree
+sudo apt install id3v2
+sudo apt install libtool autopoint
+sudo apt install git git-gui gedit
+git clone https://github.com/colinxsmith/SetupPiMusic
+ls -l SetupPiMusic
+git clone https://github.com/colinxsmith/sound
+ls -l sound
+#sudo apt install libwww-perl liblwp-protocol-https-perl libmojolicious-perl libxml-libxml-perl libcgi-pm-perl
+#sudo apt install ffmpeg atomicparsley
+#mkdir iplayer
+#cd iplayer/
+#git clone https://github.com/get-iplayer/get_iplayer.git
+#cd
+#sudo apt install mediainfo
+sudo apt install minidlna
+(cd /etc;sudo patch< ~/SetupPiMusic/patchminidlna)
+(cd /etc;sudo sed -i "s/Raspberry Buster/Hedgie Picture/" minidlna.conf)
+sudo systemctl daemon-reload
+cd SetupPiMusic
+sudo apt install vim
+cp vimrc ~/.vimrc
+cat bashrc >> ~/.bashrc
+cd
+sudo service minidlna restart
+sudo apt install imagemagick
+sudo apt install libexif-dev libjpeg-dev libid3tag0-dev libflac-dev libvorbis-dev libsqlite3-dev libavformat-dev gettext
+git clone https://git.code.sf.net/p/minidlna/git minidlna-git
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+#sudo apt install mpd
+#(cd /etc;sudo patch< ~/SetUpPiMusic/patchmpd)
+#sudo apt install mpc
+#sudo cp ~/SetUpPiMusic/upmpdcli.list /etc/apt/sources.list.d/
+#gpg --keyserver pool.sks-keyservers.net --recv-key F8E3347256922A8AE767605B7808CE96D38B9201
+#gpg --export '7808CE96D38B9201' | sudo apt-key add -
+#sudo apt update
+#sudo apt install upmpdcli
+#(cd /etc;sudo patch< ~/SetUpPiMusic/patchupmpdcli)
+#sudo service upmpdcli restart
+#sudo apt-get install openjdk-8-jre-headless
+#sudo cp ~/SetUpPiMusic/bubbleupnp /etc/init.d
+#sudo chmod 755 /etc/init.d/bubbleupnp
+sudo systemctl daemon-reload
+#wget http://www.bubblesoftapps.com/bubbleupnpserver/BubbleUPnPServer-distrib.zip  
+#unzip BubbleUPnPServer-distrib.zip
+#cp ~/SetUpPiMusic/launch.sh /home/pi
+#(cd /boot;sudo patch< ~/SetUpPiMusic/patchbootconfig)
+#git clone https://github.com/colinxsmith/jezzer
+git config --global core.editor vim
+git config --global credential.helper store
+journalctl -xe
