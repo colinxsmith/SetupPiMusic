@@ -53,5 +53,5 @@ sudo systemctl daemon-reload
 #(cd /boot;sudo patch< ~/SetUpPiMusic/patchbootconfig)
 #git clone https://github.com/colinxsmith/jezzer
 git config --global core.editor vim
-git config --global credential.helper store
+#git config --global credential.helper store
 journalctl -xe
