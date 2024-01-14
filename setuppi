@@ -52,5 +52,7 @@ cp ~/SetupPiMusic/launch.sh /home/pi
 git clone https://github.com/colinxsmith/jezzer
 git config --global core.editor vim
 git config --global credential.helper store
-sudo apt install pactl
-sudo apt install pulseaudio-utils pavucontrol
+#sudo apt install pactl
+#sudo apt install pulseaudio-utils pavucontrol
+git config --global user.name "Colin Smith"
+git config --global user.email "colinxsmith@gmail.com"
