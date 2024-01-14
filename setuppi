@@ -2,6 +2,7 @@
 mkdir Pictures
 mkdir Videos
 mkdir Music
+mkdir bin
 sudo apt install tree
 sudo apt install id3v2
 sudo apt install libtool autopoint
@@ -16,6 +17,7 @@ sudo apt install mediainfo
 sudo apt install minidlna
 (cd /etc;sudo patch< ~/SetupPiMusic/patchminidlna)
 cd SetupPiMusic
+gcc -o ~/bin/imagedata -O2 testpng.c
 cp vimrc ~/.vimrc
 cat bashrc >> ~/.bashrc
 cd
@@ -31,7 +33,10 @@ sudo apt install mpd
 sudo apt install mpc
 sudo cp ~/SetupPiMusic/upmpdcli.list /etc/apt/sources.list.d/
 gpg --keyserver pool.sks-keyservers.net --recv-key F8E3347256922A8AE767605B7808CE96D38B9201
-gpg --export '7808CE96D38B9201' | sudo apt-key add -
+#gpg --export '7808CE96D38B9201' | sudo apt-key add - OLD WAY
+gpg --export '7808CE96D38B9201' |sudo tee /etc/apt/trusted.gpg.d/myrep.asc
+#gpg --no-default-keyring --keyring ./lesbonscomptes.gpg --keyserver keyserver.ubuntu.com --recv-key F8E3347256922A8AE767605B7808CE96D38B9201
+#sudo cp lesbonscomptes.gpg /usr/share/keyrings/
 sudo apt update
 sudo apt install upmpdcli
 (cd /etc;sudo patch< ~/SetupPiMusic/patchupmpdcli)
@@ -47,3 +52,5 @@ cp ~/SetupPiMusic/launch.sh /home/pi
 git clone https://github.com/colinxsmith/jezzer
 git config --global core.editor vim
 git config --global credential.helper store
+sudo apt install pactl
+sudo apt install pulseaudio-utils pavucontrol
