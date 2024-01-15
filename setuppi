@@ -28,6 +28,8 @@ sudo apt install libexif-dev libjpeg-dev libid3tag0-dev libflac-dev libvorbis-de
 git clone https://git.code.sf.net/p/minidlna/git minidlna-git
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+sudo chmod a+rx /usr/local/bin/yt-dlp
 sudo apt install mpd
 (cd /etc;sudo patch< ~/SetupPiMusic/patchmpd)
 sudo apt install mpc
