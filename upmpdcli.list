@@ -1,2 +1,2 @@
-deb http://www.lesbonscomptes.com/upmpdcli/downloads/raspbian/ buster main
-deb-src http://www.lesbonscomptes.com/upmpdcli/downloads/raspbian/ buster main
+deb http://www.lesbonscomptes.com/upmpdcli/downloads/raspbian/ bookworm main
+deb-src http://www.lesbonscomptes.com/upmpdcli/downloads/raspbian/ bookworm main
