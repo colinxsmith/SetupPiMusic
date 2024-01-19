@@ -1,11 +1,12 @@
  #/usr/bin/bash
+ PATH=$PATH:~/bin
  base=${2:-akcol}
  orig=${1:-~/piPIc/new1015.jpg}
  echo $base $orig
  echo $base"48"
  #Specific to original picture
- convert -extract 215x300+300+90 $orig $base.jpg
- #cp $orig $base.jpg
+ #convert -extract 215x300+300+90 $orig $base.jpg
+ cp $orig $base.jpg
  #general from here
  convert -resize 48x48 $base.jpg $base"48".jpg 
  convert -resize 120x120 $base.jpg $base"120".jpg 
