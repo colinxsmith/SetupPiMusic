@@ -34,7 +34,8 @@ sudo apt install mpd
 (cd /etc;sudo patch< ~/SetupPiMusic/patchmpd)
 sudo apt install mpc
 sudo cp ~/SetupPiMusic/upmpdcli.list /etc/apt/sources.list.d/
-gpg --keyserver pool.sks-keyservers.net --recv-key F8E3347256922A8AE767605B7808CE96D38B9201
+#gpg --keyserver pool.sks-keyservers.net --recv-key F8E3347256922A8AE767605B7808CE96D38B9201
+gpg --no-default-keyring --keyring ./lesbonscomptes.gpg --keyserver keyserver.ubuntu.com --recv-key F8E3347256922A8AE767605B7808CE96D38B9201
 #gpg --export '7808CE96D38B9201' | sudo apt-key add - OLD WAY
 gpg --export '7808CE96D38B9201' |sudo tee /etc/apt/trusted.gpg.d/myrep.asc
 #gpg --no-default-keyring --keyring ./lesbonscomptes.gpg --keyserver keyserver.ubuntu.com --recv-key F8E3347256922A8AE767605B7808CE96D38B9201
