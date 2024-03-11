@@ -45,13 +45,11 @@ sudo apt update
 sudo apt install upmpdcli
 (cd /etc;sudo patch< ~/SetupPiMusic/patchupmpdcli)
 sudo service upmpdcli restart
-sudo apt-get install openjdk-8-jre-headless
-sudo cp ~/SetupPiMusic/bubbleupnp /etc/init.d
-sudo chmod 755 /etc/init.d/bubbleupnp
+sudo apt-get install openjdk-11-jre-headless
 sudo systemctl daemon-reload
 wget http://www.bubblesoftapps.com/bubbleupnpserver/BubbleUPnPServer-distrib.zip  
 unzip BubbleUPnPServer-distrib.zip
-cp ~/SetupPiMusic/launch.sh /home/pi
+./launch.sh &
 #(cd /boot;sudo patch< ~/SetupPiMusic/patchbootconfig)
 git clone https://github.com/colinxsmith/jezzer
 git config --global core.editor vim
