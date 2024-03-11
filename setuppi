@@ -12,6 +12,7 @@ sudo apt install ffmpeg atomicparsley
 mkdir iplayer
 cd iplayer/
 git clone https://github.com/get-iplayer/get_iplayer.git
+echo fs.inotify.max_user_watches=524288 | sudo tee /etc/sysctl.d/40-max-user-watches.conf && sudo sysctl --system
 cd
 sudo apt install mediainfo
 sudo apt install minidlna
