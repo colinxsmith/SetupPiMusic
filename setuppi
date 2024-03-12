@@ -45,6 +45,9 @@ sudo apt update
 sudo apt install upmpdcli
 (cd /etc;sudo patch< ~/SetupPiMusic/patchupmpdcli)
 sudo service upmpdcli restart
+sudo apt install upmpdcli-bbc
+sudo apt install sc2mpd
+sudo apt install upmpdcli-config
 sudo apt-get install openjdk-11-jre-headless
 sudo systemctl daemon-reload
 wget http://www.bubblesoftapps.com/bubbleupnpserver/BubbleUPnPServer-distrib.zip  
