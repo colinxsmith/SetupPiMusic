@@ -43,11 +43,11 @@ gpg --export '7808CE96D38B9201' |sudo tee /usr/share/keyrings/lesbonscomptes.gpg
 #gpg --no-default-keyring --keyring ./lesbonscomptes.gpg --keyserver keyserver.ubuntu.com --recv-key F8E3347256922A8AE767605B7808CE96D38B9201
 sudo apt update
 sudo apt install upmpdcli
-(cd /etc;sudo patch< ~/SetupPiMusic/patchupmpdcli)
-sudo service upmpdcli restart
 sudo apt install upmpdcli-bbc
 sudo apt install sc2mpd
 sudo apt install upmpdcli-config
+(cd /etc;sudo patch< ~/SetupPiMusic/patchupmpdcli)
+sudo service upmpdcli restart
 sudo apt-get install openjdk-11-jre-headless
 sudo systemctl daemon-reload
 wget http://www.bubblesoftapps.com/bubbleupnpserver/BubbleUPnPServer-distrib.zip  
