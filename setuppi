@@ -39,7 +39,7 @@ sudo cp ~/SetupPiMusic/upmpdcli.list /etc/apt/sources.list.d/
 gpg --no-default-keyring --keyserver keyserver.ubuntu.com --recv-key F8E3347256922A8AE767605B7808CE96D38B9201
 #gpg --export '7808CE96D38B9201' | sudo apt-key add - OLD WAY
 gpg --export '7808CE96D38B9201' |sudo tee /etc/apt/trusted.gpg.d/lesbonscomptes.gpg
-gpg --export '7808CE96D38B9201' |sudo tee /usr/share/keyrings/lesbonscomptes.gpg
+#gpg --export '7808CE96D38B9201' |sudo tee /usr/share/keyrings/lesbonscomptes.gpg
 #gpg --no-default-keyring --keyring ./lesbonscomptes.gpg --keyserver keyserver.ubuntu.com --recv-key F8E3347256922A8AE767605B7808CE96D38B9201
 sudo apt update
 sudo apt install upmpdcli
@@ -50,9 +50,9 @@ sudo apt install upmpdcli-config
 sudo service upmpdcli restart
 sudo apt-get install openjdk-11-jre-headless
 sudo systemctl daemon-reload
-wget http://www.bubblesoftapps.com/bubbleupnpserver/BubbleUPnPServer-distrib.zip  
-unzip BubbleUPnPServer-distrib.zip
-./launch.sh &
+#wget http://www.bubblesoftapps.com/bubbleupnpserver/BubbleUPnPServer-distrib.zip  
+#unzip BubbleUPnPServer-distrib.zip
+#./launch.sh &
 #(cd /boot;sudo patch< ~/SetupPiMusic/patchbootconfig)
 git clone https://github.com/colinxsmith/jezzer
 git config --global core.editor vim
