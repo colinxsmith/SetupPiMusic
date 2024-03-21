@@ -1,21 +1,22 @@
 #/bin/bash
+cd
 mkdir Pictures
 mkdir Videos
 mkdir Music
 mkdir bin
-sudo apt install tree
-sudo apt install id3v2
-sudo apt install libtool autopoint
-sudo apt install git git-gui gedit
-sudo apt install libwww-perl liblwp-protocol-https-perl libmojolicious-perl libxml-libxml-perl libcgi-pm-perl
-sudo apt install ffmpeg atomicparsley
+sudo apt install -y tree alsa-tools
+sudo apt install -y id3v2
+sudo apt install -y libtool autopoint
+sudo apt install -y git git-gui gedit
+sudo apt install -y libwww-perl liblwp-protocol-https-perl libmojolicious-perl libxml-libxml-perl libcgi-pm-perl
+sudo apt install -y ffmpeg atomicparsley
 mkdir iplayer
 cd iplayer/
 git clone https://github.com/get-iplayer/get_iplayer.git
 echo fs.inotify.max_user_watches=524288 | sudo tee /etc/sysctl.d/40-max-user-watches.conf && sudo sysctl --system
 cd
-sudo apt install mediainfo
-sudo apt install minidlna
+sudo apt install -y mediainfo
+sudo apt install -y minidlna
 (cd /etc;sudo patch< ~/SetupPiMusic/patchminidlna)
 cd SetupPiMusic
 gcc -o ~/bin/imagedata -O2 testpng.c
@@ -23,17 +24,17 @@ cp vimrc ~/.vimrc
 cat bashrc >> ~/.bashrc
 cd
 sudo service minidlna restart
-sudo apt install vim
-sudo apt install imagemagick
-sudo apt install libexif-dev libjpeg-dev libid3tag0-dev libflac-dev libvorbis-dev libsqlite3-dev libavformat-dev gettext
+sudo apt install -y vim
+sudo apt install -y imagemagick
+sudo apt install -y libexif-dev libjpeg-dev libid3tag0-dev libflac-dev libvorbis-dev libsqlite3-dev libavformat-dev gettext
 git clone https://git.code.sf.net/p/minidlna/git minidlna-git
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp
-sudo apt install mpd
+sudo apt install -y mpd
 (cd /etc;sudo patch< ~/SetupPiMusic/patchmpd)
-sudo apt install mpc
+sudo apt install -y mpc
 sudo cp ~/SetupPiMusic/upmpdcli.list /etc/apt/sources.list.d/
 #gpg --no-default-keyring --keyring ./lesbonscomptes.gpg --keyserver keyserver.ubuntu.com --recv-key F8E3347256922A8AE767605B7808CE96D38B9201
 gpg --no-default-keyring --keyserver keyserver.ubuntu.com --recv-key F8E3347256922A8AE767605B7808CE96D38B9201
@@ -42,13 +43,13 @@ gpg --export '7808CE96D38B9201' |sudo tee /etc/apt/trusted.gpg.d/lesbonscomptes.
 #gpg --export '7808CE96D38B9201' |sudo tee /usr/share/keyrings/lesbonscomptes.gpg
 #gpg --no-default-keyring --keyring ./lesbonscomptes.gpg --keyserver keyserver.ubuntu.com --recv-key F8E3347256922A8AE767605B7808CE96D38B9201
 sudo apt update
-sudo apt install upmpdcli
-sudo apt install upmpdcli-bbc
-sudo apt install sc2mpd
-sudo apt install upmpdcli-config
+sudo apt install -y upmpdcli
+sudo apt install -y upmpdcli-bbc
+sudo apt install -y sc2mpd
+sudo apt install -y upmpdcli-config
 (cd /etc;sudo patch< ~/SetupPiMusic/patchupmpdcli)
 sudo service upmpdcli restart
-sudo apt-get install openjdk-11-jre-headless
+#sudo apt-get install -y openjdk-11-jre-headless
 sudo systemctl daemon-reload
 #wget http://www.bubblesoftapps.com/bubbleupnpserver/BubbleUPnPServer-distrib.zip  
 #unzip BubbleUPnPServer-distrib.zip
@@ -57,7 +58,7 @@ sudo systemctl daemon-reload
 git clone https://github.com/colinxsmith/jezzer
 git config --global core.editor vim
 git config --global credential.helper store
-#sudo apt install pactl
-#sudo apt install pulseaudio-utils pavucontrol
+#sudo apt install -y pactl
+#sudo apt install -y pulseaudio-utils pavucontrol
 git config --global user.name "Colin Smith"
 git config --global user.email "colinxsmith@gmail.com"
