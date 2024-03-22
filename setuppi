@@ -59,6 +59,8 @@ sudo systemctl daemon-reload
 git clone https://github.com/colinxsmith/jezzer
 git clone https://github.com/colinxsmith/prices
 git clone https://github.com/colinxsmith/sound
+cp sound/stations.m3u Music/playlists/
+cp sound/WorldwideFM.m3u Music/playlists/
 git config --global core.editor vim
 git config --global credential.helper store
 #sudo apt install -y pactl
