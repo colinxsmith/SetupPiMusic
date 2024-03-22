@@ -3,6 +3,7 @@ cd
 mkdir Pictures
 mkdir Videos
 mkdir Music
+mkdir Music/playlists
 mkdir bin
 sudo apt install -y tree alsa-tools
 sudo apt install -y id3v2
@@ -56,9 +57,12 @@ sudo systemctl daemon-reload
 #./launch.sh &
 #(cd /boot;sudo patch< ~/SetupPiMusic/patchbootconfig)
 git clone https://github.com/colinxsmith/jezzer
+git clone https://github.com/colinxsmith/prices
+git clone https://github.com/colinxsmith/sound
 git config --global core.editor vim
 git config --global credential.helper store
 #sudo apt install -y pactl
 #sudo apt install -y pulseaudio-utils pavucontrol
 git config --global user.name "Colin Smith"
 git config --global user.email "colinxsmith@gmail.com"
+bash setupplaylist
