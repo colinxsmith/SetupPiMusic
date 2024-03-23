@@ -52,6 +52,7 @@ sudo apt install -y upmpdcli-config
 sudo service upmpdcli restart
 #sudo apt-get install -y openjdk-11-jre-headless
 sudo systemctl daemon-reload
+mpc rescan 
 #wget http://www.bubblesoftapps.com/bubbleupnpserver/BubbleUPnPServer-distrib.zip  
 #unzip BubbleUPnPServer-distrib.zip
 #./launch.sh &
@@ -61,6 +62,7 @@ git clone https://github.com/colinxsmith/prices
 git clone https://github.com/colinxsmith/sound
 cp sound/stations.m3u Music/playlists/
 cp sound/WorldwideFM.m3u Music/playlists/
+mpc rescan 
 git config --global core.editor vim
 git config --global credential.helper store
 #sudo apt install -y pactl
