@@ -5,7 +5,7 @@ mkdir Videos
 mkdir Music
 mkdir Music/playlists
 mkdir bin
-sudo apt install -y tree alsa-tools
+sudo apt install -y tree alsa-tools ncal
 sudo apt install -y id3v2
 sudo apt install -y libtool autopoint
 sudo apt install -y git git-gui gedit
