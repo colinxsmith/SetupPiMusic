@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+mpc add $(grep -i 1xtra ~/Music/playlists/stations.m3u)
+mpc add $(grep -i worldwide ~/Music/playlists/WorldwideFM.m3u)
+mpc add $(grep -i 6mus ~/Music/playlists/stations.m3u)
