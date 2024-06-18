@@ -14,7 +14,7 @@
 ./get_iplayer --pvr-add Jazz "Jazz on 3"
 ./get_iplayer --pvr-add iq "Nabihah Iqbal"
 ./get_iplayer --pvr-add deep "Deep Purple"
-./get_iplayer --pvr-add zep "Led Zepplin"
+./get_iplayer --pvr-add zep "Led Zeppelin"
 ./get_iplayer --pvr-add conc "6 Music Classic concert"
 ./get_iplayer --pvr-add live "6 Music Live"
 ./get_iplayer --pvr-add kinch "round midnight"
