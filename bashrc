@@ -216,4 +216,4 @@ alias leafweeks='(a=$(date +%s);b=$(date +%s --date="2020/03/03");echo  $((($a-$
 alias penweeks='(a=$(date +%s);b=$(date +%s --date="2021/10/13");echo  $((($a-$b)/3600/24/7)) weeks)'
 alias remtrack='python -c "for i in range(20,100): print \"mpc del %d\" %i" |bash'
 alias remtrack='python -c "for i in range(20,100): print(\"mpc del %d\" %i)" |bash'
-alias recordcopy='(cd ~/sound;for i in rec*.mp3; do cp  ~/Music; mpc --wait update ;mpc add ; done)'
+alias recordcopy='(cd ~/sound;for i in rec*.mp3; do echo $i;cp $i ~/Music/$i; mpc --wait update ;mpc add $i; done)'
