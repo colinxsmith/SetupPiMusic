@@ -217,3 +217,4 @@ alias penweeks='(a=$(date +%s);b=$(date +%s --date="2021/10/13");echo  $((($a-$b
 alias remtrack='python -c "for i in range(20,100): print \"mpc del %d\" %i" |bash'
 alias remtrack='python -c "for i in range(20,100): print(\"mpc del %d\" %i)" |bash'
 alias recordcopy='(cd ~/sound;for i in rec*.mp3; do echo $i;cp $i ~/Music/$i; mpc --wait update ;mpc add $i; done)'
+alias mpcsave='mpc save list$(date +%a_%d_%m_%Y_%T)'
