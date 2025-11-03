@@ -2,7 +2,7 @@
 ./get_iplayer --pid=b097sn02 -o /home/pi/Videos
 ./get_iplayer --pvr-add roddy "David Rodigan"
 ./get_iplayer --pvr-add block "BLOCK PARTY"
-./get_iplayer --pvr-add Plant "The Secrets of Quantum Physics"
+./get_iplayer --pvr-add quant "The Secrets of Quantum Physics"
 ./get_iplayer --pvr-add Plant "Robert Plant"
 ./get_iplayer --pvr-add roddy "David Rodigan"
 ./get_iplayer --pvr-add block "Block party"
