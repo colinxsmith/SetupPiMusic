@@ -1,7 +1,7 @@
  #/usr/bin/bash
  PATH=$PATH:~/bin
  base=${2:-akcol}
- orig=${1:-~/piPIc/new1015.jpg}
+ orig=${1:-ak.jpg}
  echo $base $orig
  echo $base"48"
  #Specific to original picture
@@ -17,3 +17,6 @@
  imagedata $base"120".png>$base"120p" 
  imagedata $base"120".jpg>$base"120j" 
  ls -l $base*
+convert akcol120.png -define icon:auto-resize=256,64,48,32,16 ak.ico
+#OR
+ffmpeg -i ak.jpg -vf scale=32:32 ak1.ico
