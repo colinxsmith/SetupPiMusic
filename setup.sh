@@ -3,9 +3,9 @@ sudo apt upgrade
 sudo apt install id3v2 mpc mpd git
 git clone https://github.com/colinxsmith/SetupPiMusic
 git clone https://github.com/colinxsmith/sound
-sudo systemctl status bluetooth 
-sudo systemctl enable bluetooth 
-sudo rfkill unblock 0
+#sudo systemctl status bluetooth 
+#sudo systemctl enable bluetooth 
+#sudo rfkill unblock 0
 mkdir Music playlists Pictures Videos
 mkdir Music/mp3
 sudo systemctl status mpd
